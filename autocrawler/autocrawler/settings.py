@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+from scrapy.exporters import JsonLinesItemExporter
 # Scrapy settings for autocrawler project
 #
 # For simplicity, this file contains only settings considered important or
@@ -89,3 +89,8 @@ ITEM_PIPELINES = {
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+FEED_URI = 'autocrawler.json'
+FEED_FORMAT = 'jsonlines'
+FEED_EXPORTERS = {'jsonlines': 'scrapy.exporters.JsonLinesItemExporter'}
+FEED_EXPORT_ENCODING = 'utf-8'
