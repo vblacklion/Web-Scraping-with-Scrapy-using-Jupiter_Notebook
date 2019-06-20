@@ -66,8 +66,9 @@ ROBOTSTXT_OBEY = True
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     'autocrawler.pipelines.AutocrawlerPipeline': 300,
+    'autocrawler.pipelines.CleaningPipeline': 400,
+    'autocrawler.pipelines.JsonWriterPipeline': 800,
 }
-
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/opics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True
