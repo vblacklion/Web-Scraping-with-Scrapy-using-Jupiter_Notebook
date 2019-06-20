@@ -6,7 +6,7 @@
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 import json
 from scrapy.exceptions import DropItem
-from scrapy_sci.status import Status, Reader
+#from scrapy_sci.status import Status, Reader
 
 class AutocrawlerPipeline(object):
     def process_item(self, item, spider):
