@@ -18,7 +18,7 @@ class ScoutAutoCrawler(scrapy.Spider):
     def start_requests( self ):         
         page_number = 1
         base_url = "https://www.autoscout24.com/"
-        makes = ['cupra', 'other',]
+        makes = ['ateca', 'other',]
         #models = {"audi" : ['a4', 'a6', 'a5'],
         #          "opel" : ['corsa', 'adam', 'meriva'],
         #          "renault" : ['clio', 'duster', 'scenic']
