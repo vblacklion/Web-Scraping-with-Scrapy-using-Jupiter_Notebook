@@ -6,19 +6,28 @@
 # https://doc.scrapy.org/en/latest/topics/items.html
 
 import scrapy
-
+from scrapy.item import Item, Field
 
 class AutocrawlerItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     
-    model = scrapy.Field()
-    version = scrapy.Field()
-    body_type = scrapy.Field()
-    price = scrapy.Field()
-    vat = scrapy.Field()
-    km = scrapy.Field()
-    registration = scrapy.Field()
-    kW = scrapy.Field()
-    hp = scrapy.Field()
-    url = scrapy.Field()
+    make_model = Field()
+    short_description = Field()
+    body_type = Field()
+    price = Field()
+    vat = Field()
+    km = Field()
+    registration = Field()
+    kW = Field()
+    hp = Field()
+    url = Field()
+    
+    
+#class Website(Item):
+#   def __setitem__(self, key, value):
+#       if key not in self.fields:
+#           self.fields[key] = Field()
+#       self._values[key] = value
+        
+        

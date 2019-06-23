@@ -79,7 +79,7 @@ class ScoutAutoCrawler(scrapy.Spider):
         kW = stage.css("div.cldt-stage-basic-data > div:nth-child(3) > span:nth-child(1) ::text").extract()
         hp = stage.css("div.cldt-stage-basic-data > div:nth-child(3) > span:nth-child(2) ::text").extract()
         
-        items["url"] = response.url
+        
         
         Details = response.css("div.cldt-item[data-item-name='car-details']")
         details = Details.css("div.sc-grid-row > div:nth-child(1)")
@@ -229,6 +229,7 @@ class ScoutAutoCrawler(scrapy.Spider):
         
         # saving to dictionary
         
+        items["url"] = response.url
         items["make_model"] = make_model
         items["short_description"] = short_description
         items["body_type"] = body_type
